@@ -118,7 +118,7 @@
 
           document.getElementById("btnjs3").addEventListener("click", function () {
 
-            var num1in = window.prompt("inserisci il numero");
+            var num1in = window.prompt("inserisci il numero").value;
 
             if (num1in == 0) {
               btnjs3.classList.add("blue")
@@ -128,7 +128,7 @@
               btnjs3.classList.add("red")
             }
 
-          )};
+          });
         </script>
       </div>
 
