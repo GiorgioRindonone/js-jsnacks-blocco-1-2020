@@ -74,19 +74,38 @@
 <!-- JS snack 2 -->
 
       <div id="jssnack2" class="color2">
+        <h1>JS Snack 2</h1>
+
         <input id="nome" type="text" name="" value="" placeholder="nome">
         <input id="cognome" type="text" name="" value="" placeholder="cognome">
         <button id="btnjs2" type="button" name="button">Js Snack 2</button>
 
         <script type="text/javascript">
 
-          var nome = document.getElementById("nome");
-          var cognome = document.getElementById("cognome");
+          var nome = document.getElementById("nome").value;
+          var cognome = document.getElementById("cognome").value;
 
           document.getElementById("btnjs2").addEventListener("click", function () {
 
-           console.log("nome"+"cognome");
+           console.log(nome + cognome);
           });
+
+        </script>
+      </div>
+
+      <!-- JS snack3 -->
+
+      <div id="jssnack3" class="color1">
+        <h1>JS Snack 3</h1>
+
+
+        <button id="btnjs3" type="button" name="button">JS snack 3</button>
+
+        <script type="text/javascript">
+
+
+
+
 
         </script>
       </div>
