@@ -9,13 +9,53 @@
     <style media="screen">
       .contenitore {
         display: flex;
-        justify-content: center;
+        align-items:  center;
+        flex-direction: column;
+        }
+      .contenitore div {
+        width: 400px;
+        height: auto;
+        margin: 10px 20px;
+        padding: 20px 0;
+        border: 2px solid grey;
+        border-radius: 25px;
+        display: flex;
+        align-items:  center;
+        flex-direction: column;
+        font-family: sans-serif;
       }
-    </style>
-    <div>
-      <div class="contenitore" id="jssnack1">
 
-        <button id="btnjs1" type="button" name="button">Js Snack 1</button>
+      .color1{
+        background-color: white;
+      }
+      .color2 {
+        background-color: grey;
+      }
+      .contenitore div button, .contenitore div input {
+        margin: 10px auto;
+        text-transform: uppercase;
+      }
+
+      .contenitore div button {
+        padding: 10px 10px;
+        background-color: white;
+
+        border: 5px solid lightgreen;
+        border-radius: 25px;
+
+      }
+
+    </style>
+
+
+    <div class="contenitore" >
+
+<!-- JS snack 1 -->
+
+      <div id="jssnack1" class="color1">
+        <h1>JS Snack 1</h1>
+
+        <button id="btnjs1" type="button" name="button">Snack 1</button>
 
         <script type="text/javascript">
           document.getElementById("btnjs1").addEventListener("click", function () {
@@ -24,14 +64,33 @@
           var num2in = window.prompt("inserisci il secondo numero");
           var nummax = Math.max(num1in, num2in);
 
-
-
           alert("Il numero maggiore è " + nummax);
 
         });
         </script>
 
       </div>
+
+<!-- JS snack 2 -->
+
+      <div id="jssnack2" class="color2">
+        <input id="nome" type="text" name="" value="" placeholder="nome">
+        <input id="cognome" type="text" name="" value="" placeholder="cognome">
+        <button id="btnjs2" type="button" name="button">Js Snack 2</button>
+
+        <script type="text/javascript">
+
+          var nome = document.getElementById("nome");
+          var cognome = document.getElementById("cognome");
+
+          document.getElementById("btnjs2").addEventListener("click", function () {
+
+           console.log("nome"+"cognome");
+          });
+
+        </script>
+      </div>
+
 
 
 
