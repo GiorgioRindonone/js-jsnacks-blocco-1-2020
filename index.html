@@ -29,7 +29,7 @@
         background-color: white;
       }
       .color2 {
-        background-color: grey;
+        background-color: rgb( 227, 227, 227);
       }
       .contenitore div button, .contenitore div input {
         margin: 10px auto;
@@ -98,9 +98,9 @@
 
       <div id="jssnack3" class="color1">
 
-        <h1>JS Snack 3</h1>
+        <h1 >JS Snack 3</h1>
 
-        <button id="btnjs3" type="button" name="button">JS snack 3</button>
+        <button  id="bottone3" type="button" name="button">JS snack 3</button>
 
         <style media="screen">
           .green{
@@ -116,19 +116,66 @@
 
         <script type="text/javascript">
 
-          document.getElementById("btnjs3").addEventListener("click", function () {
+          document.getElementById("bottone3").addEventListener("click", function () {
+            var num = parseInt(prompt("inserisci il numero"));
+            var bottonecolore = document.getElementById("jssnack3");
 
-            var num1in = window.prompt("inserisci il numero").value;
-
-            if (num1in == 0) {
-              btnjs3.classList.add("blue")
-            } else if (num1in%2 == 0) {
-              btnjs3.classList.add("green")
+            if (num == 0) {
+            bottonecolore.className = "blue";
+            } else if (num%2 == 0) {
+            bottonecolore.className = "green";
             } else {
-              btnjs3.classList.add("red")
+            bottonecolore.classList.add("red");
             }
 
           });
+        </script>
+      </div>
+
+      <!-- JS snack4 -->
+
+      <div id="jssnack4" class="color1">
+
+        <h1 id="numero" class="">JS Snack 4</h1>
+
+        <button  id="bottone4" type="button" name="button">JS snack 4</button>
+
+
+        <style media="screen">
+
+        .pari {
+          background-color: red;
+        }
+
+        .dispari {
+          background-color: green;
+        }
+
+        </style>
+
+        <script type="text/javascript">
+
+        document.getElementById("bottone4").addEventListener("click", funcion (){
+
+          var elemento = document.getElementById("numero");
+
+          var max = 10;
+          var min = 1;
+
+          Math.floor(Math.random () * (max - min + 1) + min);
+
+          elemento.classList.add("pari", "dispari");
+
+          if (num%2 == 0) {
+            elemento.classList.remove("pari");
+          } else {
+            elemento.classList.remove("dispari");
+          }
+
+          elemento.innerHTML = numero;
+
+        });
+
         </script>
       </div>
 
