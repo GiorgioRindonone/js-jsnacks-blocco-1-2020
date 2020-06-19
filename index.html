@@ -162,9 +162,9 @@
           var max = 10;
           var min = 1;
 
-          Math.floor(Math.random () * (max - min + 1) + min);
+          var num = Math.floor(Math.random () * (max - min + 1) + min);
 
-          // elemento.classList.add("pari", "dispari");
+          elemento.classList.add("pari", "dispari");
 
           if (num%2 == 0) {
             elemento.classList.remove("pari");
@@ -172,7 +172,7 @@
             elemento.classList.remove("dispari");
           }
 
-          elemento.innerHTML = numero;
+          elemento.innerHTML = num ;
 
         });
 
@@ -198,14 +198,27 @@
 
         <button id="bottone" type="button" name="button"></button>
         <h2 id="result"></h2>
-        
+
         <style media="screen">
 
         </style>
 
         <script type="text/javascript">
 
-          document.getElementById("bottone3").addEventListener("click", function () {
+          var btn = document.getElementById("bottone")
+          btn.addEventListener("click", function () {
+          var numero1 = parseInt(document.getElementById("numero1"));
+          var numero2 = parseInt(document.getElementById("numero2"));
+          var op = document.getElementById("operazione");
+          var result = document.getElementById("result");
+
+          if (op) {
+            result.innerHTML = "Seleziona un'operazione";
+          } else {
+
+          } else {
+
+          }
 
           });
         </script>
