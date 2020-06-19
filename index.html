@@ -155,7 +155,7 @@
 
         <script type="text/javascript">
 
-        document.getElementById("bottone4").addEventListener("click", funcion (){
+        document.getElementById("bottone4").addEventListener("click", function (){
 
           var elemento = document.getElementById("numero");
 
@@ -164,7 +164,7 @@
 
           Math.floor(Math.random () * (max - min + 1) + min);
 
-          elemento.classList.add("pari", "dispari");
+          // elemento.classList.add("pari", "dispari");
 
           if (num%2 == 0) {
             elemento.classList.remove("pari");
@@ -178,6 +178,39 @@
 
         </script>
       </div>
+
+      <!-- JS snack5 -->
+
+      <div id="jssnack5" class="color1">
+
+        <h1 >JS Snack 5</h1>
+
+        <input id="numero1" type="number" name="" value="" placeholder="inserisci numero 1">
+        <input id="numero2" type="number" name="" value="" placeholder="inserisci numero 2">
+        <select class="" id="operazione" name="operazione">
+          <option value="">Seleziona</option>
+          <option value="1">Somma</option>
+          <option value="2">Sottrai</option>
+          <option value="3">Moltiplica</option>
+          <option value="4">Dividi</option>
+
+        </select>
+
+        <button id="bottone" type="button" name="button"></button>
+        <h2 id="result"></h2>
+        
+        <style media="screen">
+
+        </style>
+
+        <script type="text/javascript">
+
+          document.getElementById("bottone3").addEventListener("click", function () {
+
+          });
+        </script>
+      </div>
+
 
 
 
