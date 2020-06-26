@@ -2,107 +2,38 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
 
     <title></title>
   </head>
   <body>
-    <style media="screen">
-      .contenitore {
-        display: flex;
-        align-items:  center;
-        flex-direction: column;
-        }
-      .contenitore div {
-        width: 400px;
-        height: auto;
-        margin: 10px 20px;
-        padding: 20px 0;
-        border: 2px solid grey;
-        border-radius: 25px;
-        display: flex;
-        align-items:  center;
-        flex-direction: column;
-        font-family: sans-serif;
-      }
-
-      .color1{
-        background-color: white;
-      }
-      .color2 {
-        background-color: rgb( 227, 227, 227);
-      }
-      .contenitore div button, .contenitore div input {
-        margin: 10px auto;
-        text-transform: uppercase;
-      }
-
-      .contenitore div button {
-        padding: 10px 10px;
-        background-color: white;
-
-        border: 5px solid lightgreen;
-        border-radius: 25px;
-
-      }
-
-    </style>
-
-
     <div class="contenitore" >
 
-<!-- JS snack 1 -->
+        <!-- JS snack 1 -->
 
       <div id="jssnack1" class="color1">
         <h1>JS Snack 1</h1>
-
         <button id="btnjs1" type="button" name="button">Snack 1</button>
 
-        <script type="text/javascript">
-          document.getElementById("btnjs1").addEventListener("click", function () {
-
-          var num1in = window.prompt("inserisci il primo numero ");
-          var num2in = window.prompt("inserisci il secondo numero");
-          var nummax = Math.max(num1in, num2in);
-
-          alert("Il numero maggiore è " + nummax);
-
-        });
-        </script>
-
+        <script type="text/javascript" src="js/jsnack1.js"> </script>
       </div>
 
-<!-- JS snack 2
--->
+        <!-- JS snack 2   -->
 
       <div id="jssnack2" class="color2">
         <h1>JS Snack 2</h1>
-
         <input id="nome" type="text" name="" value="" placeholder="nome">
         <input id="cognome" type="text" name="" value="" placeholder="cognome">
         <button id="btnjs2" type="button" name="button">Js Snack 2</button>
 
-        <script type="text/javascript">
-
-
-
-          document.getElementById("btnjs2").addEventListener("click", function () {
-
-            var nome = document.getElementById("nome").value;
-            var cognome = document.getElementById("cognome").value;
-            console.log(nome + cognome);
-          });
-
-        </script>
+        <script type="text/javascript" type="" src="js/jsnack2.js"> </script>
       </div>
 
-      <!-- JS snack3 -->
+        <!-- JS snack3 -->
 
       <div id="jssnack3" class="color1">
-
         <h1 >JS Snack 3</h1>
-
         <button  id="bottone3" type="button" name="button">JS snack 3</button>
-
         <style media="screen">
           .green{
             background-color: green;
@@ -115,77 +46,33 @@
           }
         </style>
 
-        <script type="text/javascript">
-
-          document.getElementById("bottone3").addEventListener("click", function () {
-            var num = parseInt(prompt("inserisci il numero"));
-            var bottonecolore = document.getElementById("jssnack3");
-
-            if (num == 0) {
-            bottonecolore.className = "blue";
-            } else if (num%2 == 0) {
-            bottonecolore.className = "green";
-            } else {
-            bottonecolore.classList.add("red");
-            }
-
-          });
-        </script>
+        <script type="text/javascript" src="js/jsnack3.js">  </script>
       </div>
 
-      <!-- JS snack4 -->
+        <!-- JS snack4 -->
 
       <div id="jssnack4" class="color1">
 
         <h1 id="numero" class="">JS Snack 4</h1>
-
         <button  id="bottone4" type="button" name="button">JS snack 4</button>
 
-
         <style media="screen">
-
         .pari {
           color:  red;
         }
-
         .dispari {
           color: green;
         }
-
         </style>
 
-        <script type="text/javascript">
-
-        document.getElementById("bottone4").addEventListener("click", function (){
-
-          var elemento = document.getElementById("numero");
-
-          var max = 10;
-          var min = 1;
-
-          var num = Math.floor(Math.random () * (max - min + 1) + min);
-
-          elemento.classList.add("pari", "dispari");
-
-          if (num%2 == 0) {
-            elemento.classList.remove("pari");
-          } else {
-            elemento.classList.remove("dispari");
-          }
-
-          elemento.innerHTML = num ;
-
-        });
-
-        </script>
+        <script type="text/javascript" src="js/jsnack4.js"> </script>
       </div>
 
-      <!-- JS snack5 -->
+        <!-- JS snack5 -->
 
       <div id="jssnack5" class="color1">
 
         <h1 >JS Snack 5</h1>
-
         <input id="numero1" type="number" name="" value="" placeholder="inserisci numero 1">
         <input id="numero2" type="number" name="" value="" placeholder="inserisci numero 2">
         <select class="" id="operazione" name="operazione">
@@ -194,87 +81,40 @@
           <option value="2">Sottrai</option>
           <option value="3">Moltiplica</option>
           <option value="4">Dividi</option>
-
         </select>
 
         <button id="bottone5" type="button" name="button"></button>
         <h2 id="result"></h2>
 
-        <style media="screen">
-
-        </style>
-
-        <script type="text/javascript">
-
-          var btn = document.getElementById("bottone5")
-          btn.addEventListener("click", function () {
-          var numero1 = parseInt(document.getElementById("numero1"));
-          var numero2 = parseInt(document.getElementById("numero2"));
-          var op = document.getElementById("operazione");
-          var result = document.getElementById("result");
-
-          if (op=0) {
-            result.innerHTML = "Seleziona un'operazione";
-          } else if (op=1) {
-            result.innerHTML = (numero1 + numero2) ;
-          } else if (op=2) {
-            result.innerHTML = (numero1 - numero2) ;
-          } else if (op=3) {
-            result.innerHTML = (numero1 * numero2) ;
-          } else {
-            result.innerHTML = (numero1 / numero2) ;
-          }
-
-          });
-        </script>
+        <script type="text/javascript" src="js/jsnack5.js"> </script>
       </div>
 
-      <!-- JSNACK6
-      L’utente inserisce due parole in successione, con due
-  prompt. Il software stampa prima la parola più corta, poi la
-  parola più lunga.-->
+        <!-- JSNACK6 L’utente inserisce due parole in successione, con due
+          prompt. Il software stampa prima la parola più corta, poi la
+          parola più lunga.-->
 
-  <div id="jssnack6" class="color1">
+      <div id="jssnack6" class="color1">
 
-    <h1 >JS Snack 6</h1>
+        <h1 >JS Snack 6</h1>
+        <button id="bottone6" type="button" name="button">Jsnack6</button>
+        <h2 id="result6"></h2>
 
-    <button id="bottone6" type="button" name="button">Jsnack6</button>
+        <script type="text/javascript" src="js/jsnack6.js"> </script>
+      </div>
 
-    <h2 id="result6"></h2>
+        <!-- jsnack 7 -->
+        
+      <div id="jssnack7" class="color1">
 
-    <style media="screen">
+        <h1 >JS Snack 7</h1>
 
-    </style>
+        <button id="bottone7" type="button" name="button">Jsnack7</button>
 
-    <script type="text/javascript">
-      var result = documet.getElementById("result6");
-
-      var btn6 = document.getElementById("bottone6");
-
-      btn6.addEventListener("click", function () {
-      var nome1 = prompt("inserisci il primo nome");
-      var nome2 = prompt("inserisci il secondo nome");
-
-      if (nome1.length > nome2.length) {
-        result.innerHTML = ("il nome più lungo è" nome1);
-        result.innerHTML = ("il nome più corto è" nome2);
-
-      } else if (nome2.length > nome1.length) {
-        result.innerHTML = ("il nome più lungo è" nome2);
-        result.innerHTML = ("il nome più corto è" nome1);
-      } else (nome2.length == nome1.length) {
-        result.innerHTML = ("sono lunghi uguali");
-      }
-
-      });
-      </script>
-    </div>
+        <h2 id="result"></h2>
 
 
-
-
-
-
+        <script type="text/javascript" src="js/jsnack7.js"> </script>
+      </div>
     </div>
 
   </body>
